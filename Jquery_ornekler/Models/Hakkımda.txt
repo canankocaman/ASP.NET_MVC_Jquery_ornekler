@@ -1,0 +1,3 @@
+Merhabalar, 
+
+	Hem front end hem de back end (PHP ve MySql ile) kýsmýný kendim oluþturduðum bir projem ve ASP.NET MVC yapýsý ile ilgili orta ölçekli kodlarýmý ve diðer çalýþmalarýmý Github adresimde, Python ile ilgili öðrendiklerimi paylaþmak adýna yazdýðým yazýlarýmý da http://python4hackers.com/author/canan-kocaman adrtesinde bulabilirsiniz. Yeni mezun oldum. Ýstanbul bölgesine iþ bulduðum takdirde yerleþmeyi düþünüyorum. Uygun pozisyon olmasý durumunda iletiþime geçerseniz sevinirim. Ýyi çalýþmalar.

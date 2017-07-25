@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DosyaYukleme</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.kontrol_sayisi = 1;
+            $("#bt_dosyakontroluekle").click(function () {
+                if ($.kontrol_sayisi <= 20) {
+                    $.son_div = $("#dosya" + $.kontrol_sayisi);
+                    //dosya1 id'li div'i al
+                    $.yeni_dosya_kontrol_div = $.son_div.clone(true);
+                    //bu div'i içindeki html elemanlarıyla beraber kopyala
+                    $.yeni_dosya_kontrol_div.attr("id", "dosya" + (++$.kontrol_sayisi));
+                    //yeni div'in id özelliğine kontrol_sayisi değerine göre dosya1,dosya2,dosya3... gibi değerler verilir.
+                    $.yeni_dosya_kontrol_div.insertAfter($.son_div);
+                    //kopyalanan div son divin sonuna eklenir
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+   @using (Html.BeginForm("DosyaYukleme", "Home", FormMethod.Post,
+    new { @enctype = "multipart/form-data", @id = "form1" }) )
+    
+    {
+    <div id="dosya_kontrolleri">
+        <div id="dosya1">
+            <input type="file" name="dosyalar" />
+        </div>
+    </div>
+    <input type="button" id="bt_dosyakontroluekle" value="Bir dosya daha ekle" />
+       <br /><br />
+    <input type="submit" id="bt_yukle" value="Yükle" />
+    }
+
+</body>
+</html>
